@@ -116,6 +116,17 @@ csrs = [
   (0x7b0, 'dcsr'),
   (0x7b1, 'dpc'),
   (0x7b2, 'dscratch'),
+  (0x7c0, 'mskds0'),    # Sanctum key derivation secret, low 64 bits
+  (0x7c1, 'mskds1'),    # Sanctum key derivation secret, high 64 bits
+  (0x7c2, 'mevbase'),   # Sanctum enclave virtual address base
+  (0x7c3, 'mevmask'),   # Sanctum enclave virtual address mask
+  (0x7c4, 'meptbr'),    # Sanctum enclave page table base
+  (0x7c6, 'mdrbmap'),   # Sanctum non-enclave dram region bitmap
+  (0x7c7, 'medrbmap'),  # Sanctum enclave dram region bitmap
+  (0x7c8, 'mparbase'),  # Sanctum non-enclave protected address base
+  (0x7c9, 'mparmask'),  # Sanctum non-enclave protected address mask
+  (0x7ca, 'meparbase'), # Sanctum enclave protected address base
+  (0x7cb, 'meparmask'), # Sanctum enclave protected address mask
   (0xB00, 'mcycle'),
   (0xB02, 'minstret'),
   (0xB03, 'mhpmcounter3'),
